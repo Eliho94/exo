@@ -4,7 +4,7 @@
 
 
 function writeSecretSentence(string $animal, string $element): string {
-    $sentence = ucfirst($animal) . " s'incline face à " . ucfirst($element);
+    $sentence = $animal . " s'incline face à " . $element;
     return $sentence;
 }
 

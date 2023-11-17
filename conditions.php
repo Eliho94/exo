@@ -1,18 +1,30 @@
 <?php
+
 $weapons = ['fists', 'whip', 'gun'];
-$opponentWeapon = $weapons[rand(0,2)]; // Cela permet de choisir une arme de manière aléatoire.
+
+echo $opponentWeapon = $weapons[rand(0,2)]; 
+
+// Cela permet de choisir une arme de manière aléatoire.
+
 
 // TODO
 
+
 $indyWeapon = '???';
 
-if ( $weapons[2] < $weapons[1]){
-    $indyWeapon = $weapons[2];
-}elseif($weapons[0]<$weapons[1])  {
-    $indyWeapon= $weapons[0];
-}elseif($weapons[1]<$weapons[2]){
-    $indyWeapon=[1];
-} else{
-    $indyWeapon=$opponentWeapon;
+
+if ($opponentWeapon === $weapons[0]){  //if the opponent have fists
+
+    $indyWeapon = $weapons[2];  //indiana take his gun
+
+} elseif($opponentWeapon === $weapons[1])  {  //if the opponent have a whip
+
+    $indyWeapon = $weapons[0];   //indiana take his fists
+
+} elseif($opponentWeapon === $weapons[2]){   //if the opponent have a gun
+
+    $indyWeapon = $weapons[1];    //indiana take his whip
+
 };
-echo $indyWeapon;
+
+echo PHP_EOL .$indyWeapon;
